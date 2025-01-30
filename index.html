@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilingual Memory Recall Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="title-screen">
+        <h1>Welcome to the Bilingual Memory Recall Game</h1>
+        <p><strong>Instructions:</strong></p>
+        <ul>
+            <li>Select your native language and click "Start".</li>
+            <li>You will hear an audio recording <strong>only once</strong>.</li>
+            <li>Once the audio finishes, 32 input boxes will appear.</li>
+            <li>Type the words you remember in each box.</li>
+            <li>Click "Done" when you finish and take a screenshot of your answers.</li>
+        </ul>
+        <p><strong>Important:</strong> The input boxes will unlock only after the audio ends.</p>
+        <p>Select your native language to begin:</p>
+        <select id="language-select">
+            <option value="English">English</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Russian">Russian</option>
+            <option value="Vietnamese">Vietnamese</option>
+        </select>
+        <br><br>
+        <button onclick="startGame()">Start</button>
+    </div>
+
+    <div id="game-container">
+        <h2>Listen Carefully</h2>
+        <p>You can only listen to this once. After it finishes, type the 32 words you remember.</p>
+        <div id="audio-container">
+            <audio id="audio-player" controls></audio>
+        </div>
+
+        <div id="words-container"></div>
+
+        <button id="submit-button" onclick="submitWords()" disabled>Done</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
