@@ -1,7 +1,7 @@
 let selectedLanguage = "";
 let audioPlayed = false;
 let audioFiles = {
-    "English": "audio/English.mp3",
+    "English": "audio/English.mp3", 
     "Chinese": "audio/Chinese.mp3",
     "Russian": "audio/Russian.mp3",
     "Vietnamese": "audio/Vietnamese.mp3"
